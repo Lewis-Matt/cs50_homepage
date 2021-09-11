@@ -1,0 +1,204 @@
+/* GLOBAL STYLES */
+html {
+    height: 100%;
+}
+
+body {
+    background-color: white;
+    color: #212529;
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: auto;
+    text-align: left;
+    font-family: 'Lato', sans-serif;
+    max-width: 960px;
+}
+
+/* NAVBAR ELEMENTS */
+.header {
+    background-color: white;
+    border-bottom: 2px solid black;
+    position: fixed;
+    max-height: 100px;
+    right: 0;
+    left: 0;
+    width: 100%;
+}
+/* Adjust logo location on smaller screens */
+@media screen and (max-width: 768px) {
+    .navBar {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .navLogo {
+        padding: 0;
+    }
+}
+
+.navBar{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+    flex-basis: auto;
+}
+
+.navList {
+    /*the ul is the flex container, the li are the flex items*/
+    display: flex;
+    list-style-type: none;
+    /* There is a browser default of padding-inline-start: 40px, found it by inspecting element padding. this fixes it for navbar*/
+    padding-left: 0px;
+}
+
+.navList li {
+    padding: 10px;
+}
+
+.navLink a {
+    text-decoration: none;
+    transition: font-size .5s;
+    color: rgb(95, 95, 95);
+}
+
+.navLink a:visited {
+    color: rgb(95, 95, 95);
+}
+
+.navLink a:hover {
+    color: black;
+    font-size: 1.26em;
+}
+
+/* MAIN CONTENT */
+
+/*This ensures Nav Bar doesn't cover content*/
+main {
+    padding-top: 100px;
+}
+
+h1 {
+    font-size:1.35em;
+    padding: 5px 5px;
+    text-align: center;
+    font-weight: 900;
+}
+
+h2 {
+    text-align: center;
+    font-size: 1.15em;
+    font-weight: 600;
+    padding: 5px;
+}
+
+h3 {
+    text-align: center;
+    font-size: 1.075em;
+}
+
+p {
+    text-align: left;
+    margin: 10px 10px;
+}
+
+
+
+/* SUBMIT EMAIL */
+#subscribe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#email {
+    width: 300px;
+    height: 30px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-radius: 0.3em;
+}
+#submitEmail {
+    display: block;
+    margin: auto;
+    border-radius: 0.3em;
+}
+
+/* This is for the bootstrap button */
+.btn {
+    margin:5px;
+}
+
+/*****FOOTER*****/
+
+footer {
+    display: block;
+    position: relative;
+    min-height: 100px;
+    justify-content: space-between;
+    font-family: 'Lato', sans-serif;
+    font-size: 1em;
+    width: 100%;
+    border-top: 2px solid black;
+}
+
+footer ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 1em;
+    flex-wrap: wrap;
+}
+ footer>ul>li {
+    padding-right: 2em;
+ }
+
+ /* PHOTOGRAPHY */
+#photoPara {
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    padding: 10px 10px;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto auto;
+    column-gap: 5px;
+    justify-content: center;
+}
+
+figure>img {
+    max-width: 300px;
+    height: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 1em;
+    grid-row-gap: 5px;
+    justify-content: center;
+  }
+}
+
+/* Specific Page Elements */
+
+#aboutMe>ul {
+    list-style-type: none;
+    text-align: center;
+    padding: 5px;
+
+}
+
+.centeredP {
+    text-align: center;
+    padding: 5px;
+    text-indent: 0;
+}
+
+.styledH {
+    text-decoration: underline;
+}
+
